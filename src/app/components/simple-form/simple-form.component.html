@@ -1,9 +1,13 @@
 <p>
   <input #myElementRef type="text"/>
-  <button (click)="onClick($event, myElementRef.value)">Click Me!</button>
+  <button (click)="onClick(myElementRef.value)">Add the line</button>
   <button (mouseover)="onMouseOver($event, myElementRef.value)">Mouse Over</button>
 </p>
 
-<p>{{mail.message}}</p>
+<ul>
+  <li *ngFor="let message of mailService.messages">
+    {{message.body}}
+  </li>
+</ul>
 <br>
 <p>{{api}}</p>

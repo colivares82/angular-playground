@@ -9,7 +9,7 @@ import { MailService } from '../../services/mail.service';
 export class SimpleFormComponent implements OnInit {
 
   constructor(
-    private mail: MailService,
+    private mailService: MailService,
     @Inject('api') private api) { }
 
   ngOnInit() {
@@ -19,8 +19,8 @@ export class SimpleFormComponent implements OnInit {
     console.log(`the event is ${event}`);
     console.log(`the value is ${value}`);
   }
-  onClick (event, value) {
-    console.log(`the event is ${event}`);
+  onClick (value) {
+    this.mailService.addMessage(value);
     console.log(`the value is ${value}`);
   }
 }

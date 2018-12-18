@@ -5,6 +5,18 @@ import { Injectable } from '@angular/core';
 })
 export class MailService {
 
-  message = 'You have some email';
-  constructor() { }
+  messages: Array<Object>;
+  constructor() {
+    this.messages = [
+      {body: 'You have some email'},
+      {body: 'this is the second element'},
+      {body: 'Another one'},
+      {body: 'This is another'},
+      {body: 'Yes you got it'}
+    ];
+  }
+
+  addMessage = (body) => {
+    this.messages.push({body});
+  }
 }
