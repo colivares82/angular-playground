@@ -5,11 +5,13 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {SimpleFormComponent} from './components/simple-form/simple-form.component';
 import {MailService} from './services/mail.service';
+import { InlineComponent } from './components/inline/inline.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SimpleFormComponent
+    SimpleFormComponent,
+    InlineComponent
   ],
   imports: [
     BrowserModule,

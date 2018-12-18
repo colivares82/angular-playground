@@ -5,9 +5,9 @@
 </p>
 
 <ul>
-  <li *ngFor="let message of mailService.messages">
-    {{message.body}}
-  </li>
+  <app-inline *ngFor="let message of mailService.messages"
+    [message]="message">
+  </app-inline>
 </ul>
 <br>
 <p>{{api}}</p>
