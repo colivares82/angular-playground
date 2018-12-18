@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import { MailService } from '../../services/mail.service';
 
 @Component({
@@ -8,7 +8,9 @@ import { MailService } from '../../services/mail.service';
 })
 export class SimpleFormComponent implements OnInit {
 
-  constructor(private mail: MailService) { }
+  constructor(
+    private mail: MailService,
+    @Inject('api') private api) { }
 
   ngOnInit() {
   }
