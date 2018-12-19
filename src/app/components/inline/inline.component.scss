@@ -1,0 +1,25 @@
+.inline__list {
+  background-color: #DDDDDD;
+  border: 1px solid #888888;
+  font-size: 14px;
+  padding-bottom: 4px ;
+  font-weight: normal;
+  transition: all 0.5s;
+  list-style: none;
+  cursor: crosshair;
+  height: 20px;
+
+  img {
+    height: 20px;
+    transition: all 0.5s;
+  }
+
+  &:hover {
+    background-color: #AAAAAA;
+    font-weight: bold;
+    img {
+      transform: rotate(180deg);
+    }
+  }
+
+}
