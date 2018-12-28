@@ -1,10 +1,12 @@
 <p>
-  <input #myElementRef type="text" [(ngModel)]="newMessage">
+  <input #myElementRef type="text"
+         [(ngModel)]="newMessage"
+         (keydown.enter)="addValue(myElementRef.value)">
   <button (click)="onClick(myElementRef.value)">Add the line</button>
   <button (mouseover)="onMouseOver($event, myElementRef.value)">Mouse Over</button>
 </p>
 <ul>
-  <app-inline *ngFor="let message of mailService.messages"
+  <app-inline *ngFor="let message of messages"
     [message]="message">
   </app-inline>
   <app-inline *ngIf="newMessage"

@@ -8,10 +8,12 @@ import { MailService } from '../../services/mail.service';
 })
 export class SimpleFormComponent implements OnInit {
   newMessage: string;
+  messages: Array<any>;
   constructor(
     private mailService: MailService,
     @Inject('api') private api) {
     this.newMessage = '';
+    this.messages = mailService.messages;
   }
 
   ngOnInit() {
@@ -24,5 +26,12 @@ export class SimpleFormComponent implements OnInit {
   onClick (value) {
     this.mailService.addMessage(value);
     this.newMessage = '';
+  }
+
+  addValue (value) {
+    console.log('Value');
+    if (value.length > 0) {
+      this.onClick (value);
+    }
   }
 }
