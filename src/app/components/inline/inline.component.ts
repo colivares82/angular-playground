@@ -9,7 +9,11 @@ export class InlineComponent implements OnInit, OnChanges {
   @Input() message;
 
   inlineMessage: string;
-  constructor() { }
+  isEditable: boolean;
+
+  constructor() {
+    this.isEditable = false;
+  }
 
   ngOnInit() {
     this.inlineMessage =  this.message.body === undefined ?
@@ -18,6 +22,10 @@ export class InlineComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     this.inlineMessage  = changes.message.currentValue;
+  }
+
+  toggleEdit () {
+    this.isEditable = !this.isEditable;
   }
 
 }
