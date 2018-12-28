@@ -26,4 +26,12 @@ export class MailService {
       message['id'] === id ? {id, body: newMessage} : message
     );
   }
+
+  deleteMessage (id) {
+    console.log('delete ' + id);
+    this.messages = this.messages.filter(message =>
+      message['id'] !== id
+    );
+    console.log(this.messages);
+  }
 }

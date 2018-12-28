@@ -34,4 +34,7 @@ export class InlineComponent implements OnInit, OnChanges {
     this.toggleEdit();
   }
 
+  deleteMessage () {
+    this.mailService.deleteMessage(this.message.id);
+  }
 }
