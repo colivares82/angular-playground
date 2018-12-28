@@ -7,6 +7,7 @@ import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core'
 })
 export class InlineComponent implements OnInit, OnChanges {
   @Input() message;
+
   inlineMessage: string;
   constructor() { }
 

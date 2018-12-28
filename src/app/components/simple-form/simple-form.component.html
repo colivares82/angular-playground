@@ -1,8 +1,8 @@
 <p>
   <input #myElementRef type="text"
          [(ngModel)]="newMessage"
-         (keydown.enter)="addValue(myElementRef.value)">
-  <button (click)="onClick(myElementRef.value)">Add the line</button>
+         (keydown.enter)="addValue({body: myElementRef.value})">
+  <button (click)="onClick({body: myElementRef.value})">Add the line</button>
   <button (mouseover)="onMouseOver($event, myElementRef.value)">Mouse Over</button>
 </p>
 <ul>

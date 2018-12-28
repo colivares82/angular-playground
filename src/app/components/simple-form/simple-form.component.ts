@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import {Component, EventEmitter, Inject, OnInit, Output} from '@angular/core';
 import { MailService } from '../../services/mail.service';
 
 @Component({
@@ -7,6 +7,7 @@ import { MailService } from '../../services/mail.service';
   styleUrls: ['./simple-form.component.scss']
 })
 export class SimpleFormComponent implements OnInit {
+  @Output() update = new EventEmitter();
   newMessage: string;
   messages: Array<any>;
   constructor(
@@ -29,8 +30,8 @@ export class SimpleFormComponent implements OnInit {
   }
 
   addValue (value) {
-    console.log('Value');
-    if (value.length > 0) {
+    console.log(`This is the Simple Form Component ${value}`);
+    if (value.body.length > 0) {
       this.onClick (value);
     }
   }
