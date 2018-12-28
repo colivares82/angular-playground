@@ -20,4 +20,10 @@ export class MailService {
     message.id = lastMessage['id'] + 1;
     this.messages.push(message);
   }
+
+  updateMessage (id, newMessage) {
+    this.messages = this.messages.map(message =>
+      message['id'] === id ? {id, body: newMessage} : message
+    );
+  }
 }

@@ -19,11 +19,11 @@
     <input #newValueRef
            type="text"
            [(ngModel)]="inlineMessage">
+    <button (click)="updateMessage(newValueRef.value)">
+      Save
+    </button>
     <button (click)="toggleEdit()">
       Cancel
-    </button>
-    <button (click)="updateMessage({body: newValueRef.value})">
-      Save
     </button>
   </div>
 </li>

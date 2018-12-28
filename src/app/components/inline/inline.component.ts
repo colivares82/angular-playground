@@ -1,4 +1,5 @@
-import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import { MailService } from '../../services/mail.service';
 
 @Component({
   selector: 'app-inline',
@@ -11,7 +12,7 @@ export class InlineComponent implements OnInit, OnChanges {
   inlineMessage: string;
   isEditable: boolean;
 
-  constructor() {
+  constructor( private mailService: MailService) {
     this.isEditable = false;
   }
 
@@ -26,6 +27,11 @@ export class InlineComponent implements OnInit, OnChanges {
 
   toggleEdit () {
     this.isEditable = !this.isEditable;
+  }
+
+  updateMessage(value) {
+    this.mailService.updateMessage(this.message.id, value);
+    this.toggleEdit();
   }
 
 }
