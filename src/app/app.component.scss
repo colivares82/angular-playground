@@ -11,3 +11,36 @@
     padding: 8px 20px 0px 20px;
   }
 }
+
+.HeaderWrapper {
+  @include all-transition();
+  top: 0;
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  border-bottom: solid 1px $gray-300;
+  z-index: 58;
+}
+
+
+.FlexContainerMain {
+  flex-direction: column;
+  min-height: 100%;
+  @include mq(xs) {
+    display: block;
+  }
+  @include mq(sm) {
+    display: flex;
+  }
+}
+
+.FlexContent {
+  margin-bottom: 0;
+  &.gray {
+    background-color: $gray-100;
+  }
+  &.white {
+    background-color: white;
+  }
+  flex-grow: 1;
+}
