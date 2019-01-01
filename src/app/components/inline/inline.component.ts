@@ -11,14 +11,20 @@ export class InlineComponent implements OnInit, OnChanges {
 
   inlineMessage: string;
   isEditable: boolean;
+  imagesClicked: boolean;
 
   constructor( private mailService: MailService) {
     this.isEditable = false;
+    this.imagesClicked = false;
   }
 
   ngOnInit() {
     this.inlineMessage =  this.message.body === undefined ?
       this.message : this.message.body;
+  }
+
+  isImageClicked() {
+    return this.imagesClicked;
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -27,6 +33,10 @@ export class InlineComponent implements OnInit, OnChanges {
 
   toggleEdit () {
     this.isEditable = !this.isEditable;
+  }
+
+  toggleImagesClicked () {
+    this.imagesClicked = !this.imagesClicked;
   }
 
   updateMessage(value) {
