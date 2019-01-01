@@ -1,3 +1,13 @@
-.app__container {
+@import "../assets/styles";
 
+.app__container {
+  height: 100%;
+  @include mq(xs) {
+    margin-top: $header-height-mobile;
+    padding: 0;
+  }
+  @include mq(sm) {
+    margin-top: $header-height;
+    padding: 8px 20px 0px 20px;
+  }
 }

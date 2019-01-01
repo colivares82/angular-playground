@@ -1,0 +1,230 @@
+// ---------------------------------------------------------
+// ----- Colivares Style Seed: Styles: Utility Styles ------
+// ---------------------------------------------------------
+
+.Center {
+  text-align: center;
+}
+
+.Left {
+  text-align: left;
+}
+
+.Right {
+  text-align: right;
+}
+
+.pv-0 {
+  padding: 0px;
+}
+
+.pv-10 {
+  padding: 0px 10px;
+}
+
+.pv-20 {
+  padding: 0px 20px;
+}
+
+.pv-30 {
+  padding: 0px 30px;
+}
+
+.pt-0 {
+  padding-top: 0px;
+}
+
+.pt-10 {
+  padding-top: 10px;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+
+.pl-5 {
+  padding-left: 5px;
+}
+
+.pl-10 {
+  padding-left: 10px;
+}
+
+.pr-5 {
+  padding-right: 5px;
+}
+
+.pb-10 {
+  padding-bottom: 10px;
+}
+
+.pb-14 {
+  padding-bottom: 14px;
+}
+
+.pb-20 {
+  padding-bottom: 20px;
+}
+
+.ml-5 {
+  margin-left: 5px;
+}
+
+.mr-5 {
+  margin-right: 5px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mv-10 {
+  marging: 0px 10px;
+}
+
+.mv-20 {
+  marging: 0px 20px;
+}
+
+.mv-30 {
+  marging: 0px 30px;
+}
+
+.MaxWidth__MaxHeight {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+.MaxWidth {
+  min-width: 100%;
+  width: auto;
+}
+
+.pos-a {
+  position: absolute;
+}
+
+.pos-r {
+  position: relative;
+}
+
+.dis-b {
+  display: block;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+%BackgroundCanvasBase {
+  @include background-transition;
+  @include background-fade;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  content: '';
+  z-index: -1;
+}
+
+// ********************************
+// ---------  Fixes Hacks  --------
+// ********************************
+
+.ph-fix {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.pl-fix {
+  padding-left: 0 !important;
+}
+
+.pr-fix {
+  padding-right: 0 !important;
+}
+
+.mh-fix {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.row-fix {
+  @extend .row;
+  margin: 0;
+}
+
+.btn {
+  &:focus {
+    outline: none;
+  }
+}
+
+.focusOutline {
+  cursor: pointer;
+  &:focus {
+    outline: none;
+    &:active {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Removes all spiners from Numer inputs
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+// Forces the placeholder to work with one line for textarea
+textarea::-webkit-input-placeholder {
+  white-space: nowrap;
+}
+
+textarea::-moz-placeholder {
+  white-space: nowrap;
+}
+
+textarea:-ms-input-placeholder {
+  white-space: nowrap;
+}
+
+textarea:-moz-placeholder {
+  white-space: nowrap;
+}

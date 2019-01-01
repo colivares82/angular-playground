@@ -1,0 +1,112 @@
+// ---------------------------------------------------
+// ----- Colivares Style Seed: Styles: Variables -----
+// ---------------------------------------------------
+
+
+/* Color Variables */
+$green-500:      #418C34;
+$green-400:      #61AD42;
+$green-300:      #88C453;
+
+$gray-700:       #252525;
+$gray-600:       #57585A;
+$gray-500:       #737476;
+$gray-400:       #C2C8CD;
+$gray-300:       #DBDFE1;
+$gray-200:       #F3F4F5;
+$gray-100:       #F1F4F8;
+
+$blue-900:       #0B2536;
+$blue-800:       #485C69;
+$blue-600:       #045A6A;
+$blue-500:       #3B5998;
+$blue-400:       #4A90E2;
+$blue-300:       #66C8CE;
+$blue-200:       #BCE3E6;
+$blue-100:       #EFF2F7;
+
+$purple-500:     #5C2484;
+$purple-400:     #7D2A9B;
+$purple-300:     #9C27B0;
+$purple-100:     #E8CEED;
+
+$red-700:        #DB3236;
+$red-600:        #E25A4F;
+$red-500:        #F55857;
+
+$yellow-500:     #DECF19;
+$yellow-400:     #F8E71C;
+
+
+$white:          #FFFFFF;
+$black:          #000000;
+
+/* Independent Variables */
+$screen-xs: 320px;
+$screen-sm: 768px;
+$screen-md: 1024px;
+$screen-lg: 1440px;
+
+
+/* Font Weights */
+$font-black:          600;
+$font-bold:           500;
+$font-medium:         400;
+$font-normal:         300;
+$font-light:          200;
+$font-thin:           100;
+
+
+/* line heights  */
+$line-height-base:       1.45;
+$headings-line-height:      2;
+
+// ----------------------  Header and Footer -----------------------------
+
+$header-height:               70px;
+$header-height-mobile:        50px;
+
+$footer-height:              300px;
+$footer-height-mobile:       380px;
+
+$header-height-auth:         125px;
+$header-height-auth-mobile:  220px;
+
+$footer-height-auth:         440px;
+$footer-height-auth-mobile:  460px;
+
+// -----------------------------  Sizes ---------------------------------
+
+$font-size-massive-height:        38px;
+$font-size-enormous-height:       28px;
+$font-size-huge-height:           24px;
+$font-size-extra-big-height:      22px;
+$font-size-biggest-height:        18px;
+$font-size-bigger-height:         16px;
+$font-size-big-height:            14px;
+$font-size-normal-height:         12px;
+$font-size-medium-height:         10px;
+$font-size-medium-small-height:   9px;
+$font-size-small-height:          8px;
+
+
+// --------------------------  Template Colors ------------------------------
+
+$text-color-primary:                 gray-700;
+$text-color-primary-light:           gray-600;
+$text-color-primary-negative:           white;
+$text-color-secondary:               gray-500;
+$text-color-muted:                   gray-300;
+
+$text-color-shadow:                  gray-500;
+
+$main-color-purple:              purple-400;
+$main-color-purple-hover:        purple-500;
+$main-color-purple-disabled:     purple-300;
+
+$secondary-color-green:               green-400;
+$seconday-color-green-hover:          green-500;
+$seconday-color-green-hover-disabled: green-300;
+
+// --------------------------- Images and Loaders ---------------------------
+$loading-gif: "http://www.photostream.com/img/loading-2.gif";

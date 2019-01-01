@@ -1,0 +1,56 @@
+// ----------------------------------------------------
+// ---- Colivares Style Seed: Media Queries Mixin  ----
+// ----------------------------------------------------
+
+$null: null;
+
+$breakpoints: (
+        desktop: $screen-md,
+        lg:      $screen-lg,
+        md:      $screen-md,
+        phone:   $screen-xs,
+        sm:      $screen-sm,
+        tablet:  $screen-sm,
+        xs:      $screen-xs
+);
+
+// ----------------------------
+// ---- Private Functions  ----
+// ----------------------------
+
+@function get($key, $map, $param-name: $null) {
+  @if not $key {
+    @return $key;
+  }
+  @else if map-has-key($map, $key) {
+    @return map-get($map, $key);
+  } @else {
+    @if $param-name {
+      @error "#{$key} is not a valid value for #{$param-name}";
+    } @else {
+      @error "#{$key} is not a valid value.";
+    }
+  }
+}
+
+
+@mixin scope_content($breakpoint-name: $null) {
+  $breakpoint-value: get($breakpoint-name, $breakpoints, "$breakpoint-name");
+  @if $breakpoint-value {
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// -------------------------------
+// ---- Media Query Function  ----
+// -------------------------------
+
+@mixin mq($breakpoint-name: $null) {
+  @include scope_content($breakpoint-name) {
+    @content;
+  }
+}

@@ -1,0 +1,133 @@
+// ------------------------------------------------------
+// ----- Colivares Style Seed: Mixins & Animations ------
+// ------------------------------------------------------
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+@mixin animation-delay($delay) {
+  -webkit-animation-delay: $delay;
+  -moz-animation-delay: $delay;
+  -ms-animation-delay: $delay;
+  -o-animation-delay: $delay;
+  animation-delay: $delay;
+}
+
+@mixin background-fade() {
+  -webkit-animation: fadeIn .5s .25s backwards;
+  -moz-animation: fadeIn .5s .25s backwards;
+  -ms-animation: fadeIn .5s .25s backwards;
+  animation: fadeIn .5s .25s backwards;
+}
+
+
+@mixin background-transition {
+  transition: opacity 0.3s ease-in-out;
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @-ms-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@mixin all-transition($time: 0.2) {
+  transition: all ($time + s) ease-in-out;
+}
+
+@mixin background-canvas($opacity: 1) {
+  &:before {
+    @extend %BackgroundCanvasBase;
+    @content;
+    opacity: $opacity;
+  }
+}
+
+@keyframes disapear {
+  0% {
+    opacity: 1;
+    display: inline-block;
+    height: 100%;
+  }
+  50% {
+    opacity: 0.5;
+    display: inline-block;
+    height: 50%;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    height: 0;
+  }
+}
+
+@keyframes apear {
+  0% {
+    opacity: 0;
+    display: none;
+    height: 0;
+  }
+  50% {
+    opacity: 0.5;
+    display: inline-block;
+    height: 50%;
+  }
+  100% {
+    opacity: 1;
+    display: inline-block;
+    height: 100%;
+  }
+}
+
+@keyframes apear-disapear {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
